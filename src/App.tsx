@@ -11,6 +11,16 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Categories from "./pages/Categories";
 import Posts from "./pages/Posts";
+import Comments from "./pages/Comments";
+import Likes from "./pages/Likes";
+import Materials from "./pages/Materials";
+import Packages from "./pages/Packages";
+import Diamonds from "./pages/Diamonds";
+import Payments from "./pages/Payments";
+import Projects from "./pages/Projects";
+import SocialMedia from "./pages/SocialMedia";
+import IDVerification from "./pages/IDVerification";
+import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -64,7 +74,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Comments module - Coming soon</div>
+                    <Comments />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -75,7 +85,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Likes module - Coming soon</div>
+                    <Likes />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -86,7 +96,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Materials module - Coming soon</div>
+                    <Materials />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -97,7 +107,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Packages module - Coming soon</div>
+                    <Packages />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -108,7 +118,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Diamond System - Coming soon</div>
+                    <Diamonds />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -119,7 +129,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Payments module - Coming soon</div>
+                    <Payments />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -130,7 +140,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Projects module - Coming soon</div>
+                    <Projects />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -141,7 +151,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Social Media module - Coming soon</div>
+                    <SocialMedia />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -152,7 +162,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">ID Verification module - Coming soon</div>
+                    <IDVerification />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
@@ -163,7 +173,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <DashboardLayout>
-                    <div className="text-center py-8">Feedback module - Coming soon</div>
+                    <Feedback />
                   </DashboardLayout>
                 </ProtectedRoute>
               }
