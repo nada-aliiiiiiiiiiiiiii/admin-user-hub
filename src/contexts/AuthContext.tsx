@@ -84,7 +84,9 @@ import { authService } from '@/services/api/authService';
 
 interface AuthContextType {
   user: any;
-  login: (userData: any) => void;
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  register: (email: string, password: string, name?: string) => Promise<void>;
   logout: () => void;
 }
 
@@ -98,9 +100,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setUser(currentUser);
   }, []);
 
-  const login = (userData: any) => {
-    authService.login(userData);
-    setUser(userData);
+  const login = async (email: string, password: string) => {
+    const response = await authService.login({ email, password });
+    setUser(response.user);
+  };
+
+  const register = async (email: string, password: string, name?: string) => {
+    const response = await authService.register({ email, password, name });
+    setUser(response.user);
   };
 
   const logout = () => {
@@ -109,7 +116,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );
