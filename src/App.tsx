@@ -383,6 +383,12 @@ import UserMaterials from "./pages/user/UserMaterials";
 import UserNationalID from "./pages/user/UserNationalID";
 import UserFeedback from "./pages/user/UserFeedback";
 import UserProfile from "./pages/user/UserProfile";
+import UserCertificates from "./pages/user/UserCertificates";
+import UserReports from "./pages/user/UserReports";
+import UserSkills from "./pages/user/UserSkills";
+
+// Admin specific pages
+import AdminReports from "./pages/AdminReports";
 
 import NotFound from "./pages/NotFound";
 
@@ -421,6 +427,7 @@ const App = () => (
               <Route path="/social-media" element={<SocialMedia />} />
               <Route path="/id-verification" element={<IDVerification />} />
               <Route path="/feedback" element={<Feedback />} />
+              <Route path="/admin-reports" element={<AdminReports />} />
             </Route>
 
             {/* User Panel */}
@@ -437,9 +444,12 @@ const App = () => (
               <Route path="/user/projects" element={<UserProjects />} />
               <Route path="/user/social-media" element={<UserSocialMedia />} />
               <Route path="/user/materials" element={<UserMaterials />} />
-              <Route path="/user/id-verification" element={<UserNationalID />} />
+              <Route path="/user/national-id" element={<UserNationalID />} />
               <Route path="/user/feedback" element={<UserFeedback />} />
               <Route path="/user/profile" element={<UserProfile />} />
+              <Route path="/user/certificates" element={<UserCertificates />} />
+              <Route path="/user/reports" element={<UserReports />} />
+              <Route path="/user/skills" element={<UserSkills />} />
             </Route>
 
             {/* Catch All */}
